@@ -1,163 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Farming Dashboard Patani</title>
-    <!-- Bootstrap CSS -->
+    <title>Dashboard Smart Farming</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .card {
+        border: 1px solid #e0e0e0;
+        border-left-width: 5px;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .border-left-primary {
+        border-left-color: #0d6efd;
+      }
+      .border-left-success {
+        border-left-color: #198754;
+      }
+      .border-left-info {
+        border-left-color: #0dcaf0;
+      }
+      .border-left-warning {
+        border-left-color: #ffc107;
+      }
+      .border-left-danger {
+        border-left-color: #dc3545;
+      }
+      .border-left-secondary {
+        border-left-color: #6c757d;
+      }
+
+      .card-title-custom {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .card-value {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    </style>
   </head>
-  <style>
-    .card-body {
-      background-color: #e7f2ef;
-      color: #19183b;
-      border-radius: 8px;
-      height: 150px;
-    }
-    .card-title {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .card-text {
-      font-size: 16px;
-    }
-    .card {
-      border: none;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .row {
-      margin-top: 10px;
-    }
-    .container {
-      margin-top: 50px;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-    }
-    .progress-bar {
-      background-color: #00bcd4;
-    }
-  </style>
-
   <body>
-    <div class="container">
-      <h3 class="mb-4 text-center">Smart Farming Dashboard Patani</h3>
-      <div class="dashboard">
-        <!-- Card One-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kelembapan (RH)</h5>
-            <p class="card-text">60 %</p>
+    <div class="container-fluid p-4">
+      <h3 class="mb-4">Smart Farming</h3>
+      <!-- Card One-->
+      <div class="row g-4">
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-primary">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    KELEMBABAN (RH)
+                  </div>
+                  <div class="mt-3">
+                    <span class="badge bg-primary p-2 fs-5">54 %</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
           </div>
         </div>
-
         <!-- Card Two-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">TDS</h5>
-            <p class="card-text">500 ppm</p>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-success">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    TDS
+                  </div>
+                  <div class="card-value mt-3">
+                    400 <span class="fs-5 text-muted">ppm</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
           </div>
         </div>
-
         <!-- Card Three-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kekeruhan (Turbid)</h5>
-            <p class="card-text">31 NTU</p>
-            <!-- Progress Bar -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 50%"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-info">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    KEKERUHAN (TURBID)
+                  </div>
+                  <div class="progress mt-2" style="height: 6px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 35%"
+                      aria-valuenow="35"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="card-value mt-2">
+                    18 <span class="fs-5 text-muted">NTU</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
             </div>
           </div>
         </div>
-
         <!-- Card Four-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Temperatur Air (WTEMP)</h5>
-            <p class="card-text">40°C</p>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-warning">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    Temperatur Air (WTemp)
+                  </div>
+                  <div class="card-value mt-3">
+                    25 <span class="fs-5 text-muted">°C</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
           </div>
         </div>
-
         <!-- Card Five-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Aliran Air (WFLOW)</h5>
-            <p class="card-text">46</p>
-          </div>
-        </div>
-
-        <!-- Card Six-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kekeruhan (Turbid)</h5>
-            <p class="card-text">31 NTU</p>
-            <!-- Progress Bar -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 80%"
-                aria-valuenow="80"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-danger">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    Aliran Air (WFlow)
+                  </div>
+                  <div class="card-value mt-3">34</div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
             </div>
           </div>
         </div>
-
+      </div>
+      <!-- Card Six-->
+      <div class="row g-4 mt-1">
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-secondary">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    OKSIGEN TERLARUT (DISS OXYGEN)
+                  </div>
+                  <div class="card-value mt-3">
+                    10 <span class="fs-5 text-muted">ppm</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Card Seven-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kekeruhan (Turbid)</h5>
-            <p class="card-text">31 NTU</p>
-            <!-- Progress Bar -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 75%"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-success">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    INTENSITAS CAHAYA (LUX)
+                  </div>
+                  <div class="card-value mt-3">
+                    100 <span class="fs-5 text-muted">Lux</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
             </div>
           </div>
         </div>
-
         <!-- Card Eight-->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kekeruhan (Turbid)</h5>
-            <p class="card-text">31 NTU</p>
-
-            <!-- Progress Bar -->
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 90%"
-                aria-valuenow="90"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-info">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    TEMPERATUR UDARA (AMTEMP)
+                  </div>
+                  <div class="progress mt-2" style="height: 6px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="card-value mt-2">
+                    34 <span class="fs-5 text-muted">°C</span>
+                  </div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Nine-->
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-warning">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    EC
+                  </div>
+                  <div class="card-value mt-3">2</div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card Ten-->
+        <div class="col-xl col-lg-4 col-md-6 col-sm-12">
+          <div class="card h-100 border-left-danger">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <div class="card-title-custom text-muted text-uppercase">
+                    pH
+                  </div>
+                  <div class="card-value mt-3">7.1</div>
+                </div>
+                <i class="bi bi-three-dots-vertical text-muted"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
